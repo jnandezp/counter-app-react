@@ -1,10 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { CounterApp } from './CounterApp';
+  {/**import { FirstApp } from './FirstApp';**/}
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import './App.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        {/**<FirstApp title="Hola soy Ivan" subtitle="Esto es un subtitulo" number={2008}/>**/}
+        <CounterApp value={ 20 } />
+    </React.StrictMode>
+);
